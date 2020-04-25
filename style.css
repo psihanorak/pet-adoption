@@ -1,3 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: white;
+  background-color: #B2EBF2;
+}
+
+h1 {
+  font-family: 'Bangers', cursive;
+  background-color: #FFC107;
+  border-style: groove;
+  font-size: 50px;
+  margin: 30px;
+  padding: 20px;
+}
+
+#petCards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 120px;
+}
+
+.categories {
+  display: flex;
+  padding-top: 50px;
+  font-size: larger;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.pet-cards {
+  border: 1px solid #212121;
+  box-shadow: 10px 10px 16px -9px rgba(0,0,0,0.75);
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 300px;
+  margin: 20px 50px 50px;
+  padding: 10px;
+}
+
+.pet-cards h3 {
+  background-color: #BDBDBD;
+}
+
+.pet-cards p {
+  padding: 5px;
 }
