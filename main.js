@@ -1,150 +1,150 @@
-var button = 
-  document.createElement ("button");
-  button.innerHTML = "Big Cats";
-
-
 const pets = [
   {
-    imageUrl: "appaloosa.png",
-    name: "Appaloosa",
-    color: "Base color with several pattern variations.",
-    specialSkill: "Horse racing.",
+    image: "images/appaloosa.png",
+    name: "Speckles",
+    color: "black with white spots",
+    specialSkill: "speed",
     typeOfPet: "Horse"    
   },
   {
-    image: "arabian.png",
-    name: "Arabian",
-    color: "Chestnut",
-    specialSkill: "Gentle disposition.",
+    image: "images/arabian.png",
+    name: "Ebony",
+    color: "black",
+    specialSkill: "speed",
     typeOfPet: "Horse"
   },
   {
-    image: "belgian.png",
-    name: "Belgian",
-    color: "Roan",
-    specialSkill: "Plowing fields.",
+    image: "images/belgian.png",
+    name: "Felix",
+    color: "roan",
+    specialSkill: "work",
     typeOfPet: "Horse"
   },
   {
-    image: "cheetah.png",
-    name: "Cheetah",
-    color: "Tan with black-colored spots",
-    specialSkill: "Fastest land animal.",
+    image: "images/cheetah.png",
+    name: "Foxy",
+    color: "tan with black spots",
+    specialSkill: "speed",
     typeOfPet: "Big Cat"
   },
   {
-    image: "clydesdale.png",
-    name: "Clydesdale",
-    color: "Bay with white socks.",
-    specialSkill: "Hauling for agriculture.",
+    image: "images/clydesdale.png",
+    name: "Donna",
+    color: "black and white",
+    specialSkill: "work",
     typeOfPet: "Horse"
   },
   {
-    image: "german_shepard.png",
-    name: "German Shepard",
-    color: "Black and tan.",
-    specialSkill: "Police/Military.",
+    image: "images/german_shepard.png",
+    name: "Hershey",
+    color: "black and tan",
+    specialSkill: "guard",
     typeOfPet: "Dog"
   },
   {
-    image: "husky.png",
-    name: "Siberian Husky",
-    color: "Black and white.",
-    specialSkill: "Sled pulling.",
+    image: "images/husky.png",
+    name: "Bono",
+    color: "black and white",
+    specialSkill: "work",
     typeOfPet: "Dog"
   },
   {
-    image: "jaguar.png",
-    name: "Jaguar",
-    color: "Yellow-brownish with black spots.",
-    specialSkill: "Swimmers.",
+    image: "images/jaguar.png",
+    name: "Cleopatra",
+    color: "yellow-brown with black spots",
+    specialSkill: "climber",
     typeOfPet: "Cat"
   },
   {
-    image: "labrador.png",
-    name: "Labrador",
-    color: "Chocolate, black, or yellow.",
-    specialSkill: "Excellent swimmers.",
+    image: "images/labrador.png",
+    name: "Charlie",
+    color: "yellow",
+    specialSkill: "swimmer",
     typeOfPet: "Dog"
   },
   {
-    image: "leopard.png",
-    name: "Leopard",
-    color: "Orange-brown with solid black spots.",
-    specialSkill: "Climb trees.",
+    image: "images/leopard.png",
+    name: "Felix",
+    color: "orange-brown with black spots",
+    specialSkill: "climber",
     typeOfPet: "Big Cat"
   },
   {
-    image: "lion.png",
-    name: "Lion",
-    color: "Yellow-gold.",
-    specialSkill: "Guarding territory.",
+    image: "images/lion.png",
+    name: "Romeo",
+    color: "yellow-gold.",
+    specialSkill: "king",
     typeOfPet: "Big Cat"
   },
   {
-    image: "palomino.png",
-    name: "Palomino",
-    color: "Gold with white mane.",
-    specialSkill: "Multi-purpose.",
+    image: "images/palomino.png",
+    name: "Roxie",
+    color: "gold",
+    specialSkill: "finesse",
     typeOfPet: "Horse"
   },
   {
-    image: "panther.png",
-    name: "Panther",
-    color: "Black.",
-    specialSkill: "Climb trees and pouncing.",
+    image: "images/panther.png",
+    name: "ZsaZsa",
+    color: "black",
+    specialSkill: "stealth",
     typeOfPet: "Big Cat"
   },
   {
-    image: "pitbull.png",
-    name: "Pitbull",
-    color: "Base color with white accent markings.",
-    specialSkill: "Police/Rescue.",
+    image: "images/pitbull.png",
+    name: "Tank",
+    color: "gray",
+    specialSkill: "guard",
     typeOfPet: "Dog"
   },
   {
-    image: "pug.png",
-    name: "Pug",
-    color: "Fawn.",
-    specialSkill: "Affectionate.",
+    image: "images/pug.png",
+    name: "Spark",
+    color: "fawn",
+    specialSkill: "affectionate",
     typeOfPet: "Dog"
   },
   {
-    image: "retriever.png",
-    name: "Retriever",
-    color: "Golden-Brown.",
-    specialSkill: "Versatile to train.",
+    image: "images/retriever.png",
+    name: "Mia",
+    color: "Gold-Brown.",
+    specialSkill: "versatile",
     typeOfPet: "Dog"
   },
   {
-    image: "thoroughbred.png",
-    name: "Thoroughbred",
-    color: "Bay",
-    specialSkill: "Agility and speed.",
+    image: "images/thoroughbred.png",
+    name: "Mercedes",
+    color: "bay",
+    specialSkill: "speed",
     typeOfPet: "Horse"
   },
   {
-    image: "tiger.png",
-    name: "Siberian Tiger",
-    color: "Orange with brown stripes",
-    specialSkill: "Stalk prey.",
+    image: "images/tiger.png",
+    name: "Mika",
+    color: "orange with brown stripes",
+    specialSkill: "stalker",
     typeOfPet: "Big Cat"
   }
 ];
 
+//function that domString loops objects in an array
 const buildPets = () => {
   let domString = '';
 
   for (let i = 0; i < pets.length; i++) {
     domString += `<div class="pet-cards">`;
+    domString += `<img src="${pets[i].image}"></img>`;
     domString += `<h3><center>${pets[i].name}</center></h3>`;
+    domString += `<br>`;
     domString += `<p><b>Color:</b> ${pets[i].color}</p>`;
+    domString += `<br>`;
     domString += `<p><b>Special Skill:</b> ${pets[i].specialSkill}</p>`;
+    domString += `<br>`;
     domString += `<p><center>${pets[i].typeOfPet}</center></p>`;
     domString += `</div>`;
   }
 
-  const selectedDiv = document.querySelector('#petCards');
+  const selectedDiv = document.querySelector(`#petCards`);
   selectedDiv.innerHTML = domString;
 }
 
