@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
   margin: 0;
@@ -18,19 +19,80 @@ h1 {
   padding: 20px;
 }
 
-#petCards {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  margin: 120px;
-}
-
 .categories {
   display: flex;
   padding-top: 50px;
-  font-size: larger;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
   justify-content: center;
   justify-content: space-evenly;
+}
+
+.btn_0 {
+  background-color: #90caf9;
+  color: black;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 10px 10px 16px -9px rgba(0,0,0,0.75);
+}
+
+.btn_0:hover {
+  background-color: #42a5f5;
+  color: white;
+  transition: .3s;
+}
+
+.btn_1 {
+  background-color: #a5d6a7;
+  color: black;
+  padding: 5px 25px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 10px 10px 16px -9px rgba(0,0,0,0.75);
+}
+
+.btn_1:hover {
+  background-color: #66bb6a;
+  color: white;
+  transition: .3s;
+}
+
+.btn_2 {
+  background-color: #fff59d;
+  color: black;
+  padding: 5px 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 10px 10px 16px -9px rgba(0,0,0,0.75);
+}
+
+.btn_2:hover {
+  background-color: #ffee58;
+  color: white;
+  transition: .3s;
+}
+
+.btn_3 {
+  background-color: #eeeeee;
+  color: black;
+  padding: 5px 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 10px 10px 16px -9px rgba(0,0,0,0.75);
+}
+
+.btn_3:hover {
+  background-color: #bdbdbd;
+  color: white;
+  transition: .3s;
+}
+
+#petCards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-top: 125px;
 }
 
 .pet-cards {
@@ -39,14 +101,17 @@ h1 {
   background-color: #ffffff;
   border-radius: 10px;
   width: 300px;
+  height: auto;
   margin: 20px 50px 50px;
   padding: 10px;
 }
 
-.pet-cards h3 {
-  background-color: #BDBDBD;
+.pet-cards img {
+  border-radius: 10px 10px 0px 0px;
 }
 
-.pet-cards p {
+.pet-cards h3 {
+  background-color: #bdbdbd;
   padding: 5px;
+  margin: 5px 0px;
 }
