@@ -4,152 +4,184 @@ const pets = [
     name: "Speckles",
     color: "black with white spots",
     specialSkill: "speed",
-    typeOfPet: "Horse"    
+    type: "horse"    
   },
   {
     image: "images/arabian.png",
     name: "Ebony",
     color: "black",
     specialSkill: "speed",
-    typeOfPet: "Horse"
+    type: "horse"
   },
   {
     image: "images/belgian.png",
     name: "Felix",
     color: "roan",
     specialSkill: "work",
-    typeOfPet: "Horse"
+    type: "horse"
   },
   {
     image: "images/cheetah.png",
     name: "Foxy",
     color: "tan with black spots",
     specialSkill: "speed",
-    typeOfPet: "Big Cat"
+    type: "cat"
   },
   {
     image: "images/clydesdale.png",
     name: "Donna",
     color: "black and white",
     specialSkill: "work",
-    typeOfPet: "Horse"
+    type: "horse"
   },
   {
     image: "images/german_shepard.png",
     name: "Hershey",
     color: "black and tan",
     specialSkill: "guard",
-    typeOfPet: "Dog"
+    type: "dog"
   },
   {
     image: "images/husky.png",
     name: "Bono",
     color: "black and white",
     specialSkill: "work",
-    typeOfPet: "Dog"
+    type: "dog"
   },
   {
     image: "images/jaguar.png",
     name: "Cleopatra",
     color: "yellow-brown with black spots",
     specialSkill: "climber",
-    typeOfPet: "Cat"
+    type: "cat"
   },
   {
     image: "images/labrador.png",
     name: "Charlie",
     color: "yellow",
     specialSkill: "swimmer",
-    typeOfPet: "Dog"
+    type: "dog"
   },
   {
     image: "images/leopard.png",
     name: "Felix",
     color: "orange-brown with black spots",
     specialSkill: "climber",
-    typeOfPet: "Big Cat"
+    type: "cat"
   },
   {
     image: "images/lion.png",
     name: "Romeo",
     color: "yellow-gold.",
     specialSkill: "king",
-    typeOfPet: "Big Cat"
+    type: "cat"
   },
   {
     image: "images/palomino.png",
     name: "Roxie",
     color: "gold",
     specialSkill: "finesse",
-    typeOfPet: "Horse"
+    type: "horse"
   },
   {
     image: "images/panther.png",
     name: "ZsaZsa",
     color: "black",
     specialSkill: "stealth",
-    typeOfPet: "Big Cat"
+    type: "cat"
   },
   {
     image: "images/pitbull.png",
     name: "Tank",
     color: "gray",
     specialSkill: "guard",
-    typeOfPet: "Dog"
+    type: "dog"
   },
   {
     image: "images/pug.png",
     name: "Spark",
     color: "fawn",
     specialSkill: "affectionate",
-    typeOfPet: "Dog"
+    type: "dog"
   },
   {
     image: "images/retriever.png",
     name: "Mia",
     color: "Gold-Brown.",
     specialSkill: "versatile",
-    typeOfPet: "Dog"
+    type: "dog"
   },
   {
     image: "images/thoroughbred.png",
     name: "Mercedes",
     color: "bay",
     specialSkill: "speed",
-    typeOfPet: "Horse"
+    type: "horse"
   },
   {
     image: "images/tiger.png",
     name: "Mika",
     color: "orange with brown stripes",
     specialSkill: "stalker",
-    typeOfPet: "Big Cat"
+    type: "cat"
   }
 ];
 
 //function that domString loops objects in an array
-const buildPets = () => {
+const printToDom = (selector, textToPrint) => {
+  const selectedDiv = document.querySelector(selector);
+  selectedDiv.innerHTML = textToPrint;
+}
+
+const buildPets = (petsArr) => {
   let domString = '';
 
-  for (let i = 0; i < pets.length; i++) {
-    domString += `<div class="pet-cards">`;
-    domString += `<img src="${pets[i].image}"></img>`;
-    domString += `<h3><center>${pets[i].name}</center></h3>`;
-    domString += `<br>`;
-    domString += `<p><b>Color:</b> ${pets[i].color}</p>`;
-    domString += `<br>`;
-    domString += `<p><b>Special Skill:</b> ${pets[i].specialSkill}</p>`;
-    domString += `<br>`;
-    domString += `<p><center>${pets[i].typeOfPet}</center></p>`;
-    domString += `</div>`;
+  for (let i = 0; i < petsArr.length; i++) {
+    domString += `<div class="pet-cards">
+                    <img src="${petsArr[i].image}"></img>
+                    <h3><center>${petsArr[i].name}</center></h3>
+                    <br>
+                    <p><b>Color:</b> ${petsArr[i].color}</p>
+                    <br>
+                    <p><b>Special Skill:</b> ${petsArr[i].specialSkill}</p>
+                    <br>
+                    <div class="pet-type">
+                      <p><center>${petsArr[i].type}</center></p>
+                    </div>
+                  </div>`;
   }
 
-  const selectedDiv = document.querySelector(`#petCards`);
-  selectedDiv.innerHTML = domString;
+  printToDom('#petCards', domString);
+}
+
+const filterPetsEvent = (event) => {
+  const buttonId = event.target.id;
+  const tempPetCollection = [];
+
+  if (buttonId === 'all') {
+    buildPets(pets);
+    return;
+  }
+
+  for (let i = 0; i < pets.length; i++) {
+    if (pets[i].type === buttonId) {
+      tempPetCollection.push(pets[i]);
+    }
+  }
+
+  buildPets(tempPetCollection);
+}
+
+const clickEvents = () => {
+  document.querySelector('#cat').addEventListener('click', filterPetsEvent);
+  document.querySelector('#dog').addEventListener('click', filterPetsEvent);
+  document.querySelector('#horse').addEventListener('click', filterPetsEvent);
+  document.querySelector('#all').addEventListener('click', filterPetsEvent);
 }
 
 const init = () => {
-  buildPets();
+  buildPets(pets);
+  clickEvents();
 }
 
 init();
