@@ -10,6 +10,12 @@ body {
   background-color: #B2EBF2;
 }
 
+.allPets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 h1 {
   font-family: 'Bangers', cursive;
   background-color: #FFC107;
@@ -30,6 +36,8 @@ h1 {
 
 .btn_0 {
   background-color: #90caf9;
+  outline: none;
+  font-size: 20px;
   color: black;
   padding: 5px 10px;
   border: 1px solid black;
@@ -45,8 +53,10 @@ h1 {
 
 .btn_1 {
   background-color: #a5d6a7;
+  outline: none;
+  font-size: 20px;
   color: black;
-  padding: 5px 25px;
+  padding: 5px 40px;
   border: 1px solid black;
   border-radius: 5px;
   box-shadow: 10px 10px 16px -9px rgba(0,0,0,0.75);
@@ -60,6 +70,8 @@ h1 {
 
 .btn_2 {
   background-color: #fff59d;
+  outline: none;
+  font-size: 20px;
   color: black;
   padding: 5px 40px;
   border: 1px solid black;
@@ -75,6 +87,8 @@ h1 {
 
 .btn_3 {
   background-color: #eeeeee;
+  outline: none;
+  font-size: 20px;
   color: black;
   padding: 5px 30px;
   border: 1px solid black;
@@ -114,4 +128,8 @@ h1 {
   background-color: #bdbdbd;
   padding: 5px;
   margin: 5px 0px;
+}
+
+.pet-type {
+  text-transform: capitalize;
 }
