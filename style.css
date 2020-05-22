@@ -34,7 +34,7 @@ h1 {
   justify-content: space-evenly;
 }
 
-.btn_0 {
+button#all {
   background-color: #90caf9;
   outline: none;
   font-size: 20px;
@@ -45,13 +45,13 @@ h1 {
   box-shadow: 10px 10px 16px -9px rgba(0,0,0,0.75);
 }
 
-.btn_0:hover {
+button#all:hover {
   background-color: #42a5f5;
   color: white;
   transition: .3s;
 }
 
-.btn_1 {
+button#cat {
   background-color: #a5d6a7;
   outline: none;
   font-size: 20px;
@@ -62,13 +62,13 @@ h1 {
   box-shadow: 10px 10px 16px -9px rgba(0,0,0,0.75);
 }
 
-.btn_1:hover {
+button#cat:hover {
   background-color: #66bb6a;
   color: white;
   transition: .3s;
 }
 
-.btn_2 {
+button#dog {
   background-color: #fff59d;
   outline: none;
   font-size: 20px;
@@ -79,13 +79,13 @@ h1 {
   box-shadow: 10px 10px 16px -9px rgba(0,0,0,0.75);
 }
 
-.btn_2:hover {
+button#dog:hover {
   background-color: #ffee58;
   color: white;
   transition: .3s;
 }
 
-.btn_3 {
+button#horse {
   background-color: #eeeeee;
   outline: none;
   font-size: 20px;
@@ -96,7 +96,7 @@ h1 {
   box-shadow: 10px 10px 16px -9px rgba(0,0,0,0.75);
 }
 
-.btn_3:hover {
+button#horse:hover {
   background-color: #bdbdbd;
   color: white;
   transition: .3s;
@@ -130,6 +130,29 @@ h1 {
   margin: 5px 0px;
 }
 
-.pet-type {
+.pet-cards {
   text-transform: capitalize;
+}
+
+footer {
+  font-family:'Roboto', sans-serif;
+  font-size: 17px;
+}
+
+.pet-footer.cat {
+  background-color: #a5d6a7;
+  border-radius: 0px 0px 10px 10px;
+  padding: 5px 0px;
+}
+
+.pet-footer.dog {
+  background-color: #fff59d;
+  border-radius: 0px 0px 10px 10px;
+  padding: 5px 0px;
+}
+
+.pet-footer.horse {
+  background-color: #eeeeee;
+  border-radius: 0px 0px 10px 10px;
+  padding: 5px 0px;
 }
